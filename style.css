@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --text: 1.5rem;
+    --head: calc(1rem + 5vw);
+    --bg-color: #f6b93b;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .hero-section {
+    min-height: 100vh;
+    background: url("https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+    animation: slide 1s ease-in-out;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0rem 1.5rem;
+    color: white;
+    transform: translateY(-100%);
+    animation: movedown 850ms ease-in 1s forwards;
+  }
+  
+  @keyframes movedown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+  
+  .navbar ul {
+    list-style: none;
+  }
+  
+  .navbar ul li {
+    display: inline-block;
+    margin-left: 3rem;
+    font-size: var(--text);
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .navbar ul li a:hover {
+    border-bottom: 2px solid var(--bg-color);
+  }
+  
+  .hero-text {
+    color: white;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  @keyframes slide {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+  
+  .hero-text::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1;
+    top: 0;
+    opacity: 0.6;
+  }
+  
+  .hero-text a {
+    color: white;
+    background: var(--bg-color);
+    font-weight: 900;
+    font-size: var(--text);
+    padding: 0.8rem 1rem;
+    margin: 0.8rem auto;
+    display: block;
+    text-decoration: none;
+    transition: opacity 250ms linear;
+  }
+  
+  .hero-text a:hover {
+    opacity: 0.8;
+  }
+  
+  .hero-text h2 {
+    font-size: var(--head);
+  }
+  
+  .hero-text p {
+    font-size: 3rem;
+  }
+  
+  .side-by-side {
+    /* display: flex; */
+    align-items: center;
+    background-color: #f6b93b;
+    height: 450px;
+    width: 100%;
+  }
+.side-by-side img {
+    width: 50%;
+    height: auto;
+}
+.side-by-side .description {
+    width: 50%;
+    padding: 20px;
+}
+.image{
+margin-left: 850px;
+margin-top: -250px;
+}
+.para{
+    margin-left: 150px;
+    font-size: 34px;
+     width: 550px;
+     margin-top: 40px;
+     
+}
+.heading{
+    margin-left: 150px;
+    font-size: 50px;
+     width: 550px;
+     margin-top: 90px;
+     color: white;
+
+}
+button{
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+     margin-left: 550px;    
+     background-color: black;
+     height: 50px;
+     width: 20%;
+     margin-top: -20px;
+     cursor: pointer;
+}
+
+
+a:hover {
+    border-bottom: 2px solid var(--bg-color);
+  }
+  /* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #f8a432;
+}
+
+.footer-column p,
+.footer-column ul {
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    color: #f8a432;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
